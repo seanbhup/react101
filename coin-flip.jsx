@@ -1,3 +1,6 @@
+const image1 = 'http://www.marshu.com/articles/images-website/articles/presidents-on-coins/half-dollar-coin-tail.jpg'
+const image2 = "http://www.marshu.com/articles/images-website/articles/presidents-on-coins/half-dollar-coin-head.jpg"
+
 var Application = React.createClass({
 	render: function(){
 		return(
@@ -14,18 +17,25 @@ var Application = React.createClass({
 var Coin = React.createClass({
 	getInitialState: function() {
 		return{
-			image: 'http://www.marshu.com/articles/images-website/articles/presidents-on-coins/half-dollar-coin-tail.jpg'
+			image: image1
 		}
 	},
 	flipCoin: function(){
+		var checkState;
+		var randNum = Math.round(Math.random());
+		if(randNum == 0){
+			checkState= image1;
+		}else{
+			checkState = image2;
+		}
 		this.setState({
-			image: "http://www.marshu.com/articles/images-website/articles/presidents-on-coins/half-dollar-coin-head.jpg"
+			image: checkState
 		})
 	},
 	render: function(){
 		return(
 			<div className="flip">
-				<button onClick={this.flipCoin}>Click to Flip</button>
+				<button onClick={this.flipCoin}>Flip Coin</button>
 				<div><img src={this.state.image} /></div>
 			</div>
 		)
@@ -34,8 +44,6 @@ var Coin = React.createClass({
 
 
 ReactDOM.render(
-	<Application imageSrc = 'http://www.marshu.com/articles/images-website/articles/presidents-on-coins/half-dollar-coin-tail.jpg' />, 
+	<Application />, 
 	document.getElementById('container')
 );
-
-// http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-head.jpg
