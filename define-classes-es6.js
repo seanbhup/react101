@@ -27,3 +27,14 @@ class EqTriangle extends Triangle{
 
 var eqTri = new EqTriangle(98);
 console.log(eqTri.getArea());
+// --------------------------------------.map() practice---------------------------------
+var numbers = [1, 4, 10, 15];
+var times2 = numbers.map(function(x){
+   return x * 2;
+});
+var numbersCopy = numbers.map(function(x){
+  return x.toString() + x.toString();
+});
+
+
+numbersCopy
