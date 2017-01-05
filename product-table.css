@@ -1,0 +1,18 @@
+.filterable-product-table{
+	background-color: #171123;
+	float: left;
+	color: #428bca;
+}
+
+.search-bar{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.black{
+	color: black;
+}
+
+.red{
+	color: red;
+}
