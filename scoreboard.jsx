@@ -21,11 +21,13 @@ var teams = [
 		name: "Knicks",
 		score: 0,
 		mascot: "Knickerbockers"
+		logo: 
 	},
 	{
 		name: "Bucks",
 		score: 0,
 		mascot: "Buck?"
+		logo:
 	}	
 ]
 

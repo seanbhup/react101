@@ -1,15 +1,7 @@
 function Comment(props) {
   return (
     <div className="Comment">
-      <div className="UserInfo">
-        <img className="Avatar"
-          src={props.author.avatarUrl}
-          alt={props.author.name}
-        />
-        <div className="UserInfo-name">
-          {props.author.name}
-        </div>
-      </div>
+      
       <div className="Comment-body">
         <h1>{props.commentHeading}</h1>
         <div className="Comment-text">{props.text}</div>
@@ -26,11 +18,33 @@ function Comment(props) {
   );
 }
 
+
+
+function Application(props){
+
+return(
+  <div className="UserInfo">
+        <img className="Avatar"
+          src={props.author.avatarUrl}
+          alt={props.author.name}
+        />
+        <div className="UserInfo-name">
+          {props.author.name}
+        </div>
+  </div>
+)
+
+}
+
 ReactDOM.render(
-<Application />,
+<Application author={author} />,
 document.getElementById('container')
 )
 
+author = {
+  avatarUrl: "some image URL",
+  name: "MR BASE!"
+}
 // var users = [
 //   {
 //     name: "Drew",
